@@ -2,3 +2,6 @@
 .env
 __pycache__/
 .DS_Store
+
+application_fees_over_time.ipynb
+application_fees_over_time(CDS-based).py
