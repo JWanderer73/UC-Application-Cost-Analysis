@@ -13,13 +13,22 @@ PROCESSED_DIR = IPEDS_DIR / "processed"
 # takes in a filename of an instutionalm characteristic or cost1 file and returns a dataframe containng the ug application fee indexed by the unitid
 def get_appl_fee(file_name : str, inCost : bool) -> pd.DataFrame:
 
-    year = re.search(r"\d{4}",file_name).group()
+    year = re.search(r"[1,2]\d{3}", file_name)
+
+    # years before 2000 sometimes just list the last 2 digits of the year
+    if (year == None):
+        year = re.search(r"\d{2}", file).group()
+        year = "19" + year
+    else:
+        year = year.group()
+
 
     # check if the file is from cost1
     if (inCost):
         ic = pd.read_csv(COST1_DIR / file_name)
     else:
-        ic = pd.read_csv(IC_DIR / file_name)
+        # pre-2000 range data is not encoded utf-8
+        ic = pd.read_csv(IC_DIR / file_name, encoding="cp1252")
     
     ic.columns = ic.columns.str.upper()
     ic = ic[["UNITID","APPLFEEU"]]
@@ -52,6 +61,7 @@ for file in newfiles:
     output = pd.merge(output, col, on="UNITID", how="outer")
 
 output = output.fillna(0)
+output = output[["UNITID"] + sorted(output.columns.drop("UNITID"), key=int)]
 print(output)
 
 output.to_csv(PROCESSED_DIR / "merged_application_fees.csv", index = False)
