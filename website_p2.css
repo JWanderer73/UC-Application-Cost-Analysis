@@ -1,0 +1,101 @@
+.content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+  
+  .large {
+    grid-row: span 2;
+  }
+  
+  .right-column {
+    display: grid;
+    gap: 30px;
+  }
+  .chart-small {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .ap-raw {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .ap-inflation {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .ucsd-raw {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .ucsd-inflation {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+.title{
+    text-align:center;
+    font-size:60px;
+    margin-top:40px;
+    margin-bottom:30px;
+    font-weight:900;
+}
+
+.ap{
+    color:#6fd3e8;
+    text-shadow:2px 2px #4aa5bb;
+}
+
+.app{
+    color:#ff9bd6;
+    text-shadow:2px 2px #cc6aa8;
+}
+
+body{
+    background-color:#b9d1e3;
+    font-family: 'Fredoka', sans-serif;
+    margin:0;
+}
+.card{
+    background:white;
+    padding:2px;
+    border-radius:10px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.nav-arrows{
+    position:fixed;
+    bottom:100px;
+    left:0;
+    width:100%;
+    pointer-events:none;
+}
+
+.arrow{
+    position:absolute;
+    font-size:70px;
+    text-decoration:none;
+    color:#2f5c8a;
+    font-weight:bold;
+    pointer-events:auto;
+}
+
+.arrow:hover{
+    transform:scale(1.2);
+}
+
+.left{
+    left:40px;
+}
+
+.right{
+    right:40px;
+}
