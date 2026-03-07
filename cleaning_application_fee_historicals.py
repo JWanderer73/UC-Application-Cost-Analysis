@@ -10,7 +10,7 @@ IC_DIR = IPEDS_DIR / "institutional_characteristics"
 COST1_DIR = IPEDS_DIR / "cost1"
 PROCESSED_DIR = IPEDS_DIR / "processed"
 
-# takes in a filename of an instutionalm characteristic or cost1 file and returns a dataframe containng the ug application fee indexed by the unitid
+# takes in a filename of an instutional characteristic or cost1 file and returns a dataframe containng the uc application fee indexed by the unitid
 def get_appl_fee(file_name : str, inCost : bool) -> pd.DataFrame:
 
     year = re.search(r"[1,2]\d{3}", file_name)
