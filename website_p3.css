@@ -5,25 +5,39 @@
     max-width: 1100px;
     margin: 40px auto;
   }
+  
+  .large {
+    grid-row: span 2;
+  }
+  
+  .right-column {
+    display: grid;
+    gap: 30px;
+  }
 
-
-.body{
+  .body {
     text-align:left;
-    font-size:20px;
-    margin-top:10px;
-    margin-bottom:30px;
+    font-size:40px;
     font-weight:500;
-}
-
-.caption{
     color:#000000;
-}
+  }
+
+  .caption1 {
+    grid-column: 1;
+    grid-row: 1;
+  } 
+
+  .caption2 {
+    grid-column: 2;
+    grid-row: 2;
+  } 
 
 body{
     background-color:#e6e6e6;
     font-family: 'Fredoka', sans-serif;
     margin:0;
 }
+
 
 .nav-arrows{
     position:fixed;
