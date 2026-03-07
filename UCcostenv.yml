@@ -9,4 +9,5 @@ dependencies:
   - matplotlib
   - scikit-learn
   - pip
+  - openpyxl
   - ipykernel
