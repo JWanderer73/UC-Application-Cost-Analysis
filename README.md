@@ -4,7 +4,7 @@
 
 Data cleaning, analysis, and visualization code for prediction of total application cost to UC schools over time. The code interprets historical application fee, ap test cost, and average ap test volume data by school to create cleaned datasets. Then, we use regression models to predict up to five years into the future. 
 
-## Installation
+## Local Setup
 
 Clone the repo, then create a datasets folder. For data, we recommend you download the datasets folder from this [Google Drive](https://drive.google.com/drive/folders/1H-ZfhlW7eAbbYQYnVMrslm4a2uzMp23v?usp=drive_link).
 
@@ -18,6 +18,8 @@ For school application fees, go to the [IPEDS dataset](https://nces.ed.gov/ipeds
 
 [1]: https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=-1&surveyNumber=1&sid=42140801-8bc4-4f3b-93ab-151e400fd9b5&rtid=7
 [2]: https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=-1&surveyNumber=19&sid=42140801-8bc4-4f3b-93ab-151e400fd9b5&rtid=7
+
+To run the code locally, create a conda forge environment using UCcostenv.yml
 
 ## Usage
 
