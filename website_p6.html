@@ -213,11 +213,12 @@
                 const ucData = await loadCSV("uc_application_fee_predictions.csv");
 
                 apData.slice(1).forEach(r => {
-                    if (r[0]) ap_year_fee_dict[r[0].trim()] = parseFloat(r[1]);
+                    if (r[0]) ap_year_fee_dict[stringYear] = parseFloat(r[1]);
                 });
 
                 ucData.slice(1).forEach(r => {
-                    if (r[0]) uc_year_fee_dict[r[0].trim()] = parseFloat(r[1]);
+                    stringYear = Math.floor(parseFloat(r[0].trim())).toString()
+                    if (r[0]) uc_year_fee_dict[stringYear] = parseFloat(r[1]);
                 });
 
                 calculate();
