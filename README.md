@@ -32,4 +32,4 @@ school_application_fee_prediction.ipynb: This notebook works with the UC applica
 AP_test_fee_prediction.ipynb: This notebook works with the AP test fee data found [here](https://www.totalregistration.net/AP-Exam-Registration-Service/Follow-The-Money-History-of-College-Board-Finances.php). This notebook creates a plot for the AP test fees over time, and the inflaiton adjusted fees. Additionally, it creates a linear regression model off it, and uses that to predict the fee cost for the next 5 years.
 
 ## Website
-To redeploy the website simply fork the repository, and deploy a github pages website from the branch website-erin.
+To redeploy the website simply fork the repository, and deploy a github pages website from the branch website, using the root directory.
