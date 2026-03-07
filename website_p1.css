@@ -8,7 +8,7 @@
 
 .title{
     text-align:center;
-    font-size:70px;
+    font-size:100px;
     margin-top:270px;
     margin-bottom:30px;
     font-weight:900;
@@ -16,10 +16,10 @@
 
 .body{
     text-align:center;
-    font-size:35px;
     margin-top:10px;
     margin-bottom:30px;
     font-weight:500;
+    color:#000000;
 }
 
 .uc{
@@ -32,8 +32,12 @@
     text-shadow:2px 2px #cc6aa8;
 }
 
-.caption{
-    color:#000000;
+.caption1{
+    font-size:35px;
+}
+
+.caption2{
+    font-size:30px;
 }
 
 body{
