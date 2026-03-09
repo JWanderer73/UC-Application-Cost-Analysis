@@ -33,3 +33,8 @@ AP_test_fee_prediction.ipynb: This notebook works with the AP test fee data foun
 
 ## Website
 To redeploy the website simply fork the repository, and deploy a github pages website from the branch 'website', using the root directory.
+
+## Limitations
+- Can only reasonably predict a few years in the future without updating with new data.
+- Because data on the number of AP exams taken is in bins, we can not predict a specific value; the best we can do is predict a range.
+- Even while updating with new data, we may not be able to predict further in the future if the 10+ bin is near 100%.
